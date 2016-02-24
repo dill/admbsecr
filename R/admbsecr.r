@@ -1,19 +1,18 @@
 #' Fitting SECR models in ADMB
 #'
-#' Fits an SECR model, with our without supplementary information
-#' relevant to animal location. Parameter estimation is done by
+#' Fits an SECR model, with or without supplementary information
+#' relevant to animal location. Parameter are estimated by
 #' maximum likelihood through an AD Model Builder (ADMB) executable.
 #'
 #' ADMB uses a quasi-Newton method to find maximum likelihood
 #' estimates for the model parameters. Standard errors are calculated
-#' by taking the inverse of the negative of the
-#' Hessian. Alternatively, \link{boot.admbsecr} can be used to carry
-#' out a parametric bootstrap procedure, from which parameter
-#' uncertainty can also be inferred.
+#' by taking the inverse of the negative of the Hessian. Alternatively,
+#' \code{\link{boot.admbsecr}} can be used to carry out a parametric bootstrap
+#' procedure, from which parameter uncertainty can also be inferred.
 #'
 #' The class of model fitted by this function (and, indeed, around
 #' which this package is based) was first proposed by Borchers et
-#' al. (in press); this reference is a good starting point for
+#' al. (2015); this reference is a good starting point for
 #' practitioners looking to implement these methods.
 #'
 #' If the data are from an acoustic survey where individuals call more
@@ -21,8 +20,8 @@
 #' that are not 1), then standard errors calculated from the inverse
 #' of the negative Hessian are not correct. They are therefore not
 #' provided in this case. The method used by the function
-#' \link{boot.admbsecr} is currently the only way to calculate these
-#' reliably (see Stevenson et al., in prep., for details).
+#' \code{\link{boot.admbsecr}} is currently the only way to calculate these
+#' reliably (see Stevenson et al., 2015, for details).
 #'
 #' @section The \code{capt} argument:
 #'
@@ -326,15 +325,15 @@
 #' Ornithology}, \strong{152}: 435--444.
 #'
 #' @references Borchers, D. L., Stevenson, B. C., Kidney, D., Thomas,
-#' L., and Marques, T. A. (in press) A unifying model for
+#' L., and Marques, T. A. (2015) A unifying model for
 #' capture-recapture and distance sampling surveys of wildlife
 #' populations. \emph{Journal of the American Statistical
-#' Association}.
+#' Association}, \strong{110}(509): 195--204.
 #'
 #' @references Stevenson, B. C., Borchers, D. L., Altwegg, R., Swift,
-#' R. J., Gillespie, D. M., and Measey, G. J. (submitted) A general
+#' R. J., Gillespie, D. M., and Measey, G. J. (2015) A general
 #' framework for animal density estimation from acoustic detections
-#' across a fixed microphone array.
+#' across a fixed microphone array. \emph{Methods in Ecology and Evolution}, \strong{6}: 38--48.
 #'
 #' @return A list of class \code{"admbsecr"}. Components contain
 #' information such as estimated parameters and standard errors. The
@@ -343,13 +342,13 @@
 #'
 #' @param capt A list with named components, containing the capture
 #' history and supplementary information. The function
-#' \link{create.capt} will return a suitable object. See 'Details'
+#' \code{\link{create.capt}} will return a suitable object. See 'Details'
 #' below.
 #' @param traps A matrix with two columns. Each row provides Cartesian
 #' coordinates for the location of a trap (or detector).
 #' @param mask A matrix with two columns. Each row provides Cartesian
 #' coordinates for the location of a mask point. The function
-#' \link{create.mask} will return a suitable object.
+#' \code{\link{create.mask}} will return a suitable object.
 #' @param detfn A character string specifying the detection function
 #' to be used. One of "hn" (halfnormal), "hr" (hazard rate), "th"
 #' (threshold), "lth" (log-link threshold), or "ss" (signal
@@ -397,17 +396,17 @@
 #' @param optim.opts Optimisation options. See 'Details' for further
 #' information.
 #'
-#' @seealso \link{boot.admbsecr} to calculate standard errors and
+#' @seealso \code{\link{boot.admbsecr}} to calculate standard errors and
 #' estimate bias using a parametric bootstrap.
-#' @seealso \link{coef.admbsecr}, \link{stdEr.admbsecr}, and
-#' \link{vcov.admbsecr} to extract estimated parameters, standard
+#' @seealso \code{\link{coef.admbsecr}}, \code{\link{stdEr.admbsecr}}, and
+#' \code{\link{vcov.admbsecr}} to extract estimated parameters, standard
 #' errors, and the variance-covariance matrix, respectively.
-#' @seealso \link{confint.admbsecr} to calculate confidence intervals.
-#' @seealso \link{summary.admbsecr} to get a summary of estimates and
+#' @seealso \code{\link{confint.admbsecr}} to calculate confidence intervals.
+#' @seealso \code{\link{summary.admbsecr}} to get a summary of estimates and
 #' standard errors.
-#' @seealso \link{show.detfn} to plot the estimated detection
+#' @seealso \code{\link{show.detfn}} to plot the estimated detection
 #' function.
-#' @seealso \link{locations} to plot estimated locations of particular
+#' @seealso \code{\link{locations}} to plot estimated locations of particular
 #' individuals or calls.
 #'
 #' @examples
