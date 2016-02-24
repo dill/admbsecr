@@ -240,8 +240,11 @@ whether or not to use Nelder-Mead optimisation. Defaults to
 
 
 The parameter \code{D}, the density of individuals (or, in an
-acoustic survey, the density of calls) is always fitted. The
-effective survey area, \code{esa}, (see Borchers, 2012, for
+acoustic survey, the density of calls) is always fitted. \code{D} is
+estimated as the density per hectare per unit of time corresponding
+to the duration of the survey. So if your survey was for 15 mins for 2
+occasions, \code{D} is number of animals (or calls) per hectare per 30 mins.
+The effective survey area, \code{esa}, (see Borchers, 2012, for
 details) is always provided as a derived parameter, with a standard
 error calculated using the delta method.
 
