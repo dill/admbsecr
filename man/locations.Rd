@@ -13,7 +13,7 @@ locations(fit, id, infotypes = NULL, xlim = range(mask[, 1]),
   circle.traps = TRUE, show.labels = TRUE, plot.contours = TRUE,
   plot.estlocs = FALSE, plot.arrows = "bearing" \%in\% fit$infotypes,
   plot.circles = "dist" \%in\% fit$infotypes, arrow.length = NULL,
-  show.legend = !add, show.axes = TRUE, add = FALSE)
+  show.legend = !add, show.axes = TRUE, add = FALSE, main = NULL)
 }
 \arguments{
 \item{fit}{A fitted model from \link{admbsecr}.}
@@ -113,6 +113,8 @@ plot.}
 
 \item{add}{Logical, if \code{TRUE}, contours will be added to an
 existing plot.}
+
+\item{main}{an overall title for the plot: see \code{\link{title}}.}
 }
 \description{
 Plots estimated densities of animal locations, which are latent

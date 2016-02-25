@@ -79,6 +79,7 @@
 #' plot.
 #' @param add Logical, if \code{TRUE}, contours will be added to an
 #' existing plot.
+#' @param main an overall title for the plot: see \code{\link{title}}.
 #'
 #' @examples
 #' locations(example$fits$simple.hn, 1)
@@ -102,7 +103,8 @@ locations <- function(fit, id, infotypes = NULL, xlim = range(mask[, 1]),
                       plot.arrows = "bearing" %in% fit$infotypes,
                       plot.circles = "dist" %in% fit$infotypes,
                       arrow.length = NULL,
-                      show.legend = !add, show.axes = TRUE, add = FALSE){
+                      show.legend = !add, show.axes = TRUE, add = FALSE,
+                      main=NULL){
     ## Error for locations() with a directional model.
     if (!is.null(fit$args$ss.opts$directional)){
         if (fit$args$ss.opts$directional){
@@ -125,6 +127,9 @@ locations <- function(fit, id, infotypes = NULL, xlim = range(mask[, 1]),
         if (show.axes){
             axis(1)
             axis(2)
+        }
+        if(!is.null(main)){
+          title(main=main)
         }
     }
     ## Ignoring 'nlevels' if 'levels' is provided.
