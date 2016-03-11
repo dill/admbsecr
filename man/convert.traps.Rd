@@ -8,7 +8,7 @@ convert.traps(traps, ss = FALSE)
 }
 \arguments{
 \item{traps}{A matrix with two columns. Each row provides Cartesian
-coordinates for the location of a trap (or detector).}
+coordinates for the location of a trap (or detector). Note that the ordering of the matrix should be the order of the trap IDs (as in \code{capt}).}
 
 \item{ss}{Logical, set to \code{TRUE} if a signal strength
 detection function is to be used.}

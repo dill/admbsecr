@@ -348,7 +348,7 @@
 #' \code{\link{create.capt}} will return a suitable object. See 'Details'
 #' below.
 #' @param traps A matrix with two columns. Each row provides Cartesian
-#' coordinates for the location of a trap (or detector).
+#' coordinates for the location of a trap (or detector). Note that the ordering of the matrix should be the order of the trap IDs (as in \code{capt}).
 #' @param mask A matrix with two columns. Each row provides Cartesian
 #' coordinates for the location of a mask point. The function
 #' \code{\link{create.mask}} will return a suitable object.

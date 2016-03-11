@@ -9,7 +9,7 @@ convert.mask(mask)
 \arguments{
 \item{mask}{A matrix with two columns. Each row provides Cartesian
 coordinates for the location of a mask point. The function
-\link{create.mask} will return a suitable object.}
+\code{\link{create.mask}} will return a suitable object.}
 }
 \value{
 An object of class \code{mask}.

@@ -16,7 +16,7 @@ additional information types, detection function, and parameter
 values from which to generate capture histories.}
 
 \item{traps}{A matrix with two columns. Each row provides Cartesian
-coordinates for the location of a trap (or detector).}
+coordinates for the location of a trap (or detector). Note that the ordering of the matrix should be the order of the trap IDs (as in \code{capt}).}
 
 \item{mask}{A matrix with two columns, providing x- and
 y-coordinates respectively. The extreme x- and y-coordinates define

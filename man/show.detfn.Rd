@@ -15,9 +15,7 @@ limits. If \code{NULL}, this is set to the buffer of the mask.}
 
 \item{ylim}{A vector with two elements, giving the y-axis limits.}
 
-\item{main}{The main title (on top) using font and size (character
-    expansion) \code{par("font.main")} and color
-    \code{par("col.main")}.}
+\item{main}{an overall title for the plot: see \code{\link{title}}.}
 
 \item{xlab}{X axis label using font and character expansion
     \code{par("font.lab")} and color \code{par("col.lab")}.}

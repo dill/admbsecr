@@ -8,7 +8,7 @@ create.mask(traps, buffer, ...)
 }
 \arguments{
 \item{traps}{A matrix with two columns. Each row provides Cartesian
-coordinates for the location of a trap (or detector).}
+coordinates for the location of a trap (or detector). Note that the ordering of the matrix should be the order of the trap IDs (as in \code{capt}).}
 
 \item{buffer}{The minimum distance between trap locations and the
 edge of the generated mask.}

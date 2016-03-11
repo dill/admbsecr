@@ -16,7 +16,7 @@ convert.capt.to.secr(capt, traps, capthist = TRUE, cutoff = NULL)
 object for \code{convert.capt.to.secr}.}
 
 \item{traps}{A matrix with two columns. Each row provides Cartesian
-coordinates for the location of a trap (or detector).}
+coordinates for the location of a trap (or detector). Note that the ordering of the matrix should be the order of the trap IDs (as in \code{capt}).}
 
 \item{capthist}{Logical, if \code{TRUE}, a \code{capthist} object
 is returned. Otherwise a data frame is returned, which is suitable
