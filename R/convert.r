@@ -216,6 +216,9 @@ convert.capt.to.secr <- function(capt, traps, capthist = TRUE, cutoff = NULL){
         out[, i] <- t(capt[[i]])[t(capt$bincapt) == 1]
     }
     if (capthist){
+        # row names are important for make.capthist, remove them and
+        # assume ordering
+        rownames(traps) <- NULL
         traps <- convert.traps(traps, ss = fit.ss)
         out <- make.capthist(out, traps, fmt = "trapID", noccasions = 1,
                              cutval = cutoff)
